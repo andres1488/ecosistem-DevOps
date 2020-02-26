@@ -1,0 +1,24 @@
+version: "2"
+services:
+  jenkins:
+    image: jenkins/jenkins:2.222-jdk11
+    ports:
+      - "8080:8080"      
+      - "50000:50000"
+    volumes:
+      - ${DEVOPS_HOME}/data-Jenkins:/var/jenkins_home
+  # nexus:
+  #   image: sonatype/nexus3    
+  #   ports:
+  #     - "8081:8081"
+  #   volumes:
+  #     -  ${DEVOPS_HOME}/data-Nexus:/nexus-data
+  # sonar: 
+  #   image: sonarqube   
+  #   ports:
+  #     - "8082:9000"
+  #   volumes:
+  #     - ${DEVOPS_HOME}/sonarqube/conf:/opt/sonarqube/conf \
+  #     - ${DEVOPS_HOME}/sonarqube/extensions:/opt/sonarqube/extensions \
+  #     - ${DEVOPS_HOME}/sonarqube/logs:/opt/sonarqube/logs \
+  #     - ${DEVOPS_HOME}/sonarqube/data:/opt/sonarqube/data \

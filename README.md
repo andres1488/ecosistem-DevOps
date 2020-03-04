@@ -6,4 +6,6 @@ This repository create containers to different tools with durable data.
 ### `Commands lines`
 * ./start.sh
 * sudo docker-compose up --build
-* Go to http://localhost:3050/
+* Jenkins   -> http://localhost:8080/
+* Nexus     -> http://localhost:8081/
+* Sonarqube -> http://localhost:8082/
